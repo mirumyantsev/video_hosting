@@ -1,6 +1,6 @@
 # Video Hosting Web-Service
 
-#### Available requests:
+## Available requests:
 
 * POST   /auth/signin
 * POST   /auth/change_password
@@ -39,11 +39,11 @@
 * GET    /stream/get/:id
 * GET    /stream/get/all
 
-#### To watch available streams:
+## To watch available streams:
 
 Post in your web browser 127.0.0.1:8000/stream
 
-#### Deploying:
+## Deploying:
 
 1. Create an .env file in directory ./configs/ and post variables from example .env.example.
 2. Create database named "vhosting" in your DBMS and create tables by executing
