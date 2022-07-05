@@ -1,4 +1,4 @@
-module github.com/mikerumy/vhosting
+module github.com/mirumyantsev/video_hosting
 
 go 1.18
 

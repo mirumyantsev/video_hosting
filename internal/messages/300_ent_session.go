@@ -1,7 +1,7 @@
 package messages
 
 import (
-	"github.com/mikerumy/vhosting/pkg/logger"
+	"github.com/mirumyantsev/video_hosting/pkg/logger"
 )
 
 func ErrorCannotDeleteSession(err error) *logger.Log {

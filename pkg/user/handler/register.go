@@ -2,11 +2,11 @@ package handler
 
 import (
 	"github.com/gin-gonic/gin"
-	sess "github.com/mikerumy/vhosting/internal/session"
-	"github.com/mikerumy/vhosting/pkg/auth"
-	"github.com/mikerumy/vhosting/pkg/config"
-	"github.com/mikerumy/vhosting/pkg/logger"
-	"github.com/mikerumy/vhosting/pkg/user"
+	sess "github.com/mirumyantsev/video_hosting/internal/session"
+	"github.com/mirumyantsev/video_hosting/pkg/auth"
+	"github.com/mirumyantsev/video_hosting/pkg/config"
+	"github.com/mirumyantsev/video_hosting/pkg/logger"
+	"github.com/mirumyantsev/video_hosting/pkg/user"
 )
 
 func RegisterHTTPEndpoints(router *gin.Engine, cfg *config.Config, uc user.UserUseCase,

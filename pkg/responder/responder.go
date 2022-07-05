@@ -4,7 +4,7 @@ import (
 	"reflect"
 
 	"github.com/gin-gonic/gin"
-	"github.com/mikerumy/vhosting/pkg/logger"
+	"github.com/mirumyantsev/video_hosting/pkg/logger"
 )
 
 type MessageOutput struct {

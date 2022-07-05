@@ -2,15 +2,15 @@ package handler
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/mikerumy/vhosting/internal/info"
-	msg "github.com/mikerumy/vhosting/internal/messages"
-	sess "github.com/mikerumy/vhosting/internal/session"
-	"github.com/mikerumy/vhosting/pkg/auth"
-	"github.com/mikerumy/vhosting/pkg/config"
-	sconfig "github.com/mikerumy/vhosting/pkg/config_stream"
-	"github.com/mikerumy/vhosting/pkg/logger"
-	"github.com/mikerumy/vhosting/pkg/timedate"
-	"github.com/mikerumy/vhosting/pkg/user"
+	"github.com/mirumyantsev/video_hosting/internal/info"
+	msg "github.com/mirumyantsev/video_hosting/internal/messages"
+	sess "github.com/mirumyantsev/video_hosting/internal/session"
+	"github.com/mirumyantsev/video_hosting/pkg/auth"
+	"github.com/mirumyantsev/video_hosting/pkg/config"
+	sconfig "github.com/mirumyantsev/video_hosting/pkg/config_stream"
+	"github.com/mirumyantsev/video_hosting/pkg/logger"
+	"github.com/mirumyantsev/video_hosting/pkg/timedate"
+	"github.com/mirumyantsev/video_hosting/pkg/user"
 )
 
 type InfoHandler struct {

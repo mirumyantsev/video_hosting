@@ -4,10 +4,10 @@ import (
 	"strconv"
 
 	"github.com/gin-gonic/gin"
-	"github.com/mikerumy/vhosting/pkg/auth"
-	"github.com/mikerumy/vhosting/pkg/config"
-	"github.com/mikerumy/vhosting/pkg/hasher"
-	"github.com/mikerumy/vhosting/pkg/user"
+	"github.com/mirumyantsev/video_hosting/pkg/auth"
+	"github.com/mirumyantsev/video_hosting/pkg/config"
+	"github.com/mirumyantsev/video_hosting/pkg/hasher"
+	"github.com/mirumyantsev/video_hosting/pkg/user"
 )
 
 type UserUseCase struct {

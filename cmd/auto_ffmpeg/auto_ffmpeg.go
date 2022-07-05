@@ -1,19 +1,26 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
+	"io"
+	"io/ioutil"
 	"log"
+	"mime/multipart"
+	"net/http"
 	"os"
 	"os/exec"
+	"path/filepath"
 	"time"
 
+	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
-	"github.com/mikerumy/vhosting/internal/constants"
-	"github.com/mikerumy/vhosting/pkg/config"
-	qconsts "github.com/mikerumy/vhosting/pkg/constants/query"
-	"github.com/mikerumy/vhosting/pkg/db_connect"
-	"github.com/mikerumy/vhosting/pkg/stream/usecase"
+	"github.com/mirumyantsev/video_hosting/internal/constants"
+	"github.com/mirumyantsev/video_hosting/pkg/config"
+	qconsts "github.com/mirumyantsev/video_hosting/pkg/constants/query"
+	"github.com/mirumyantsev/video_hosting/pkg/db_connect"
+	"github.com/mirumyantsev/video_hosting/pkg/stream/usecase"
 )
 
 const (
@@ -185,4 +192,52 @@ func concatVideo(pathsFile, outputVideo string) error {
 		return err
 	}
 	return nil
+}
+
+func InitVideoSending(ctx *gin.Context) {
+	url := "http://10.100.100.60:8654/api/idRequest"
+	method := "POST"
+	vidPath := "./tmp/videoplayback.mp4"
+
+	payload := &bytes.Buffer{}
+	writer := multipart.NewWriter(payload)
+	_ = writer.WriteField("id", "123")
+	file, errFile2 := os.Open(vidPath)
+	defer file.Close()
+
+	part2,
+		errFile2 := writer.CreateFormFile("file", filepath.Base(vidPath))
+	_, errFile2 = io.Copy(part2, file)
+	if errFile2 != nil {
+		fmt.Println(errFile2)
+		return
+	}
+
+	err := writer.Close()
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	client := &http.Client{}
+	req, err := http.NewRequest(method, url, payload)
+
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	req.Header.Set("Content-Type", writer.FormDataContentType())
+	res, err := client.Do(req)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	defer res.Body.Close()
+
+	body, err := ioutil.ReadAll(res.Body)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	fmt.Println(string(body))
 }

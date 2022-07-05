@@ -2,9 +2,9 @@ package usecase
 
 import (
 	"github.com/gin-gonic/gin"
-	msg "github.com/mikerumy/vhosting/internal/messages"
-	"github.com/mikerumy/vhosting/pkg/logger"
-	"github.com/mikerumy/vhosting/pkg/responder"
+	msg "github.com/mirumyantsev/video_hosting/internal/messages"
+	"github.com/mirumyantsev/video_hosting/pkg/logger"
+	"github.com/mirumyantsev/video_hosting/pkg/responder"
 )
 
 type LogUseCase struct {

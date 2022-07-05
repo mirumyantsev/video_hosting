@@ -3,11 +3,11 @@ package repository
 import (
 	"fmt"
 
-	"github.com/mikerumy/vhosting/pkg/auth"
-	"github.com/mikerumy/vhosting/pkg/config"
-	qconsts "github.com/mikerumy/vhosting/pkg/constants/query"
-	"github.com/mikerumy/vhosting/pkg/db_connect"
-	"github.com/mikerumy/vhosting/pkg/user"
+	"github.com/mirumyantsev/video_hosting/pkg/auth"
+	"github.com/mirumyantsev/video_hosting/pkg/config"
+	qconsts "github.com/mirumyantsev/video_hosting/pkg/constants/query"
+	"github.com/mirumyantsev/video_hosting/pkg/db_connect"
+	"github.com/mirumyantsev/video_hosting/pkg/user"
 )
 
 type AuthRepository struct {

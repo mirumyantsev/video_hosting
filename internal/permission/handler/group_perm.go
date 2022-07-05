@@ -2,8 +2,8 @@ package handler
 
 import (
 	"github.com/gin-gonic/gin"
-	msg "github.com/mikerumy/vhosting/internal/messages"
-	"github.com/mikerumy/vhosting/pkg/logger"
+	msg "github.com/mirumyantsev/video_hosting/internal/messages"
+	"github.com/mirumyantsev/video_hosting/pkg/logger"
 )
 
 func (h *PermHandler) SetGroupPermissions(ctx *gin.Context) {

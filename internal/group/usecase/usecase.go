@@ -4,8 +4,8 @@ import (
 	"strconv"
 
 	"github.com/gin-gonic/gin"
-	"github.com/mikerumy/vhosting/internal/group"
-	"github.com/mikerumy/vhosting/pkg/user"
+	"github.com/mirumyantsev/video_hosting/internal/group"
+	"github.com/mirumyantsev/video_hosting/pkg/user"
 )
 
 type GroupUseCase struct {

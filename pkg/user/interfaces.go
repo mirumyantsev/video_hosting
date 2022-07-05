@@ -2,7 +2,7 @@ package user
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/mikerumy/vhosting/pkg/auth"
+	"github.com/mirumyantsev/video_hosting/pkg/auth"
 )
 
 type UserCommon interface {

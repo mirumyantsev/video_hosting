@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/dgrijalva/jwt-go"
-	"github.com/mikerumy/vhosting/pkg/auth"
+	"github.com/mirumyantsev/video_hosting/pkg/auth"
 )
 
 type tokenClaims struct {

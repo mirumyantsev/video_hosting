@@ -2,7 +2,7 @@ package auth
 
 import (
 	"github.com/gin-gonic/gin"
-	sess "github.com/mikerumy/vhosting/internal/session"
+	sess "github.com/mirumyantsev/video_hosting/internal/session"
 )
 
 type AuthCommon interface {

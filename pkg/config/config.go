@@ -5,8 +5,8 @@ import (
 	"strconv"
 	"strings"
 
-	msg "github.com/mikerumy/vhosting/internal/messages"
-	"github.com/mikerumy/vhosting/pkg/logger"
+	msg "github.com/mirumyantsev/video_hosting/internal/messages"
+	"github.com/mirumyantsev/video_hosting/pkg/logger"
 	"github.com/spf13/viper"
 )
 

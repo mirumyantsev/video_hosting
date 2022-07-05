@@ -3,10 +3,10 @@ package repository
 import (
 	"fmt"
 
-	"github.com/mikerumy/vhosting/internal/group"
-	qconsts "github.com/mikerumy/vhosting/pkg/constants/query"
-	"github.com/mikerumy/vhosting/pkg/db_connect"
-	"github.com/mikerumy/vhosting/pkg/user"
+	"github.com/mirumyantsev/video_hosting/internal/group"
+	qconsts "github.com/mirumyantsev/video_hosting/pkg/constants/query"
+	"github.com/mirumyantsev/video_hosting/pkg/db_connect"
+	"github.com/mirumyantsev/video_hosting/pkg/user"
 )
 
 func (r *GroupRepository) SetUserGroups(values string) error {

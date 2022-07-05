@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"reflect"
 
-	perm "github.com/mikerumy/vhosting/internal/permission"
-	"github.com/mikerumy/vhosting/pkg/auth"
-	"github.com/mikerumy/vhosting/pkg/config"
-	qconsts "github.com/mikerumy/vhosting/pkg/constants/query"
-	"github.com/mikerumy/vhosting/pkg/db_connect"
-	"github.com/mikerumy/vhosting/pkg/user"
+	perm "github.com/mirumyantsev/video_hosting/internal/permission"
+	"github.com/mirumyantsev/video_hosting/pkg/auth"
+	"github.com/mirumyantsev/video_hosting/pkg/config"
+	qconsts "github.com/mirumyantsev/video_hosting/pkg/constants/query"
+	"github.com/mirumyantsev/video_hosting/pkg/db_connect"
+	"github.com/mirumyantsev/video_hosting/pkg/user"
 )
 
 type UserRepository struct {

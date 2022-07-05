@@ -2,9 +2,9 @@ package handler
 
 import (
 	"github.com/gin-gonic/gin"
-	msg "github.com/mikerumy/vhosting/internal/messages"
-	"github.com/mikerumy/vhosting/pkg/logger"
-	"github.com/mikerumy/vhosting/pkg/timedate"
+	msg "github.com/mirumyantsev/video_hosting/internal/messages"
+	"github.com/mirumyantsev/video_hosting/pkg/logger"
+	"github.com/mirumyantsev/video_hosting/pkg/timedate"
 )
 
 func (h *StreamHandler) GetStream(ctx *gin.Context) {

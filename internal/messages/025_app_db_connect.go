@@ -4,7 +4,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/mikerumy/vhosting/pkg/logger"
+	"github.com/mirumyantsev/video_hosting/pkg/logger"
 )
 
 func InfoEstablishedOpenedDBConnection(timeSinceOpen time.Time) *logger.Log {

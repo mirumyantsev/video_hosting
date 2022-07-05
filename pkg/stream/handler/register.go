@@ -2,13 +2,13 @@ package handler
 
 import (
 	"github.com/gin-gonic/gin"
-	sess "github.com/mikerumy/vhosting/internal/session"
-	"github.com/mikerumy/vhosting/pkg/auth"
-	"github.com/mikerumy/vhosting/pkg/config"
-	sconfig "github.com/mikerumy/vhosting/pkg/config_stream"
-	"github.com/mikerumy/vhosting/pkg/logger"
-	"github.com/mikerumy/vhosting/pkg/stream"
-	"github.com/mikerumy/vhosting/pkg/user"
+	sess "github.com/mirumyantsev/video_hosting/internal/session"
+	"github.com/mirumyantsev/video_hosting/pkg/auth"
+	"github.com/mirumyantsev/video_hosting/pkg/config"
+	sconfig "github.com/mirumyantsev/video_hosting/pkg/config_stream"
+	"github.com/mirumyantsev/video_hosting/pkg/logger"
+	"github.com/mirumyantsev/video_hosting/pkg/stream"
+	"github.com/mirumyantsev/video_hosting/pkg/user"
 )
 
 func RegisterTemplateHTTPEndpoints(router *gin.Engine, cfg *config.Config, scfg *sconfig.Config, uc stream.StreamUseCase,

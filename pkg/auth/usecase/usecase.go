@@ -2,11 +2,11 @@ package usecase
 
 import (
 	"github.com/gin-gonic/gin"
-	sess "github.com/mikerumy/vhosting/internal/session"
-	"github.com/mikerumy/vhosting/pkg/auth"
-	"github.com/mikerumy/vhosting/pkg/config"
-	"github.com/mikerumy/vhosting/pkg/hasher"
-	"github.com/mikerumy/vhosting/pkg/headers"
+	sess "github.com/mirumyantsev/video_hosting/internal/session"
+	"github.com/mirumyantsev/video_hosting/pkg/auth"
+	"github.com/mirumyantsev/video_hosting/pkg/config"
+	"github.com/mirumyantsev/video_hosting/pkg/hasher"
+	"github.com/mirumyantsev/video_hosting/pkg/headers"
 )
 
 type AuthUseCase struct {

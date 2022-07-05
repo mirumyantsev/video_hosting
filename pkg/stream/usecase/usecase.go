@@ -14,16 +14,16 @@ import (
 	"github.com/deepch/vdk/codec/h264parser"
 	"github.com/deepch/vdk/format/rtspv2"
 	webrtc "github.com/deepch/vdk/format/webrtcv3"
-	msg "github.com/mikerumy/vhosting/internal/messages"
-	"github.com/mikerumy/vhosting/pkg/config"
-	sconfig "github.com/mikerumy/vhosting/pkg/config_stream"
-	"github.com/mikerumy/vhosting/pkg/logger"
-	"github.com/mikerumy/vhosting/pkg/stream"
+	msg "github.com/mirumyantsev/video_hosting/internal/messages"
+	"github.com/mirumyantsev/video_hosting/pkg/config"
+	sconfig "github.com/mirumyantsev/video_hosting/pkg/config_stream"
+	"github.com/mirumyantsev/video_hosting/pkg/logger"
+	"github.com/mirumyantsev/video_hosting/pkg/stream"
 )
 
 const (
 	errorStreamExitNoViewer = "Stream was exited on demand - no Viewer"
-	snapshotPath            = "./media/vhosting/%s/images"
+	snapshotPath            = "./media/%s/images"
 	snapshotName            = "snapshot.jpg"
 	videoTimeoutSeconds     = 80
 )
@@ -369,23 +369,10 @@ func (u *StreamUseCase) WritePackets(url string, muxerWebRTC *webrtc.Muxer, audi
 func (u *StreamUseCase) CastListAdd(suuid string) (string, chan av.Packet) {
 	u.scfg.StreamsMutex.Lock()
 	defer u.scfg.StreamsMutex.Unlock()
-	// cuuid := u.pseudoUUID()
-	cuuid := suuid
 	ch := make(chan av.Packet, 100)
-	u.scfg.Streams[suuid].ClientList[cuuid] = sconfig.Viewer{Cast: ch}
-	return cuuid, ch
+	u.scfg.Streams[suuid].ClientList[suuid] = sconfig.Viewer{Cast: ch}
+	return suuid, ch
 }
-
-// func (u *StreamUseCase) pseudoUUID() (uuid string) {
-// 	bytes := make([]byte, 16)
-// 	_, err := rand.Read(bytes)
-// 	if err != nil {
-// 		logger.Printc(nil, msg.ErrorPseudoUUIDReadError(err))
-// 		return
-// 	}
-// 	uuid = fmt.Sprintf("%X-%X-%X-%X-%X", bytes[0:4], bytes[4:6], bytes[6:8], bytes[8:10], bytes[10:])
-// 	return
-// }
 
 func (u *StreamUseCase) CastListDelete(suuid, cuuid string) {
 	u.scfg.StreamsMutex.Lock()

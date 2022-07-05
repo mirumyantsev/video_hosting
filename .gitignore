@@ -1,4 +1,5 @@
+video_hosting
 .env
 stream_config.json
 media/
-app
+tmp/

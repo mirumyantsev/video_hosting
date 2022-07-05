@@ -1,6 +1,6 @@
 package main
 
-import "github.com/mikerumy/vhosting/pkg/config"
+import "github.com/mirumyantsev/video_hosting/pkg/config"
 
 type NonCatVideo struct {
 	Id             int

@@ -2,7 +2,7 @@ package info
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/mikerumy/vhosting/pkg/user"
+	"github.com/mirumyantsev/video_hosting/pkg/user"
 )
 
 type InfoCommon interface {

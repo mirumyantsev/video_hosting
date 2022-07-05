@@ -47,7 +47,7 @@ Post in your web browser 127.0.0.1:8000/stream
 
 1. Create an .env file in directory ./configs/ and post variables from example .env.example.
 2. Create database named "vhosting" in your DBMS and create tables by executing
-SQL query file vhosting_database.sql.
+SQL query file up_database.sql.
 3. Build a binary with this command:
 
 go build ./cmd/app

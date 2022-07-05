@@ -1,8 +1,8 @@
 package messages
 
 import (
-	"github.com/mikerumy/vhosting/internal/video"
-	"github.com/mikerumy/vhosting/pkg/logger"
+	"github.com/mirumyantsev/video_hosting/internal/video"
+	"github.com/mirumyantsev/video_hosting/pkg/logger"
 )
 
 func ErrorUrlAndFilenameCannotBeEmpty() *logger.Log {
